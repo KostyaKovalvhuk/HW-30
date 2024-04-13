@@ -1,18 +1,32 @@
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.box    {
-    display: inline-block;
+.moving {
     width: 100px;
     height: 100px;
     background-color: red;
-    margin: 0 auto;
-    animation: slideOutRight;
-    animation-duration: 2000ms;
+    position: relative;
+margin: 200px 200px;
+ 
+animation-name: moving;
+animation-duration: 10000ms;
+/* animation-timing-function: linear; */
+animation-iteration-count: infinite;
+/* animation-play-state: running; */
 }
 
-
-    
+@keyframes moving {
+    0%{
+  left: 0;
+background-color: red;
+    } 
+    25% {
+        top: 200px;
+        background-color: blue;
+    }
+    50%{
+left: 200px;
+background-color: green;
+    }
+    75% {
+     top: -200px;
+background-color: yellow;
+    }
+}
